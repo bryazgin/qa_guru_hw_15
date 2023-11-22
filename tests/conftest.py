@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from utils import attach
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup_browser(request):
     # options = Options()
     # selenoid_capabilities = {
@@ -28,7 +28,7 @@ def setup_browser(request):
     # )
 
     # browser.config.driver = driver
-    browser.config.base_url = 'https://hh.ru/vacancy'
+    browser.config.base_url = 'https://samolet.ru/'
     browser.config.window_width = 1366
     browser.config.window_height = 768
 
@@ -40,3 +40,7 @@ def setup_browser(request):
     attach.add_video(browser)
 
     browser.quit()
+
+@pytest.fixture(scope='function')
+def open_main_page():
+    browser.open('')
