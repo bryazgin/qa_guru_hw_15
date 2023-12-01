@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from utils import attach
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
     options = Options()
     selenoid_capabilities = {
@@ -28,7 +28,7 @@ def setup_browser(request):
     )
 
     browser.config.driver = driver
-    browser.config.base_url = 'https://samolet.ru/'
+    browser.config.base_url = 'https://smlab.digital'
     browser.config.window_width = 1366
     browser.config.window_height = 768
 
@@ -46,9 +46,5 @@ def open_main_page():
     browser.open('')
 
 @pytest.fixture(scope='function')
-def open_company_page():
-    browser.open('company/')
-
-@pytest.fixture(scope='function')
-def close_browser():
-    browser.quit()
+def open_about_page():
+    browser.open('/about.html')
