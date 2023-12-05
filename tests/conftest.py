@@ -1,12 +1,13 @@
 import os
 import pytest
+from selene import have
 from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from utils import attach
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def setup_browser(request):
     options = Options()
     selenoid_capabilities = {
@@ -48,3 +49,10 @@ def open_main_page():
 @pytest.fixture(scope='function')
 def open_about_page():
     browser.open('/about.html')
+
+# @pytest.fixture(scope='function')
+# def change_to_english(setup_browser):
+#     if browser.element('.lang').should(have.text('En')):
+#         pass
+#     else:
+#         browser.element('.lang').click()

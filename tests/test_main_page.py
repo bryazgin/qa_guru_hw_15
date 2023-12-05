@@ -1,7 +1,7 @@
 from selene import browser, have, be, command
 
 
-def test_open_main_page(open_main_page):
+def test_main_page_have_slider(open_main_page):
     browser.should(have.url('https://smlab.digital/'))
     browser.element('.slider_new').should(be.visible)
 
