@@ -24,18 +24,35 @@ UI тесты реализованы в связке `Python`+`Selene`.
 
 Запуск тестов выполняется в проекте [Jenkins](https://jenkins.autotests.cloud/job/008-Bryazgin-hw15/).
 
-1. Перейти в [проект](https://jenkins.autotests.cloud/job/008-Bryazgin-hw15/) и нажать кнопку `Build with Parameters`.
+### 1. Перейти в [проект](https://jenkins.autotests.cloud/job/008-Bryazgin-hw15/) и нажать кнопку `Build with Parameters`.
 <img src="resources/screenshots/Build with Parameters.png" width="1000">
-2. Указать параметры сборки  
+
+### 2. Указать параметры сборки  
 `COMMENT` - комментарий, указывающий особенности сборки  
 `ENVIRONMENT` - выбор среды запуска тестов  
 <img src="resources/screenshots/select parameters.png" width="1000">
-3. Дождаться окончания прогона
+
+### 3. Дождаться окончания прогона
 <img src="resources/screenshots/finish run.png" width="1000"> 
-4. Для просмотра отчета нажать одну из иконок 
+
+### 4. Для просмотра отчета нажать одну из иконок 
 <img src="resources/screenshots/report icons.png" width="1000"> 
 
+### Пример отчета в Allure
+<img src="resources/screenshots/Allure.png" width="1000">
+
+### Пример отчета в Allure testops
+<img src="resources/screenshots/Allure Testops.png" width="1000">
+
+### Пример запуска теста в Selenoid
+<img src="resources/screenshots/test.gif" alt="video" width="1000">
+
+### По результатам прогона получаем уведомление с краткой информацией в телеграм
+<p align="center"> 
+    <img src="resources/screenshots/telegram.png" width="400">
+</p>
 
 
 
-## Локальный запуск.
+
+
