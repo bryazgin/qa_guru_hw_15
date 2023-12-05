@@ -30,8 +30,8 @@ def setup_browser(request):
 
     browser.config.driver = driver
     browser.config.base_url = 'https://smlab.digital'
-    browser.config.window_width = 1366
-    browser.config.window_height = 768
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
 
     yield browser
 
